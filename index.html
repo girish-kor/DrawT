@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DrawT</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <!-- Link to Google Fonts for Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <section class="tool-panel">
+        <div class="tool-item" title="Brush Tool">
+          <span class="material-icons">brush</span>
+          <p>Brush</p>
+        </div>
+
+        <div class="tool-item" title="Eraser Tool">
+          <span class="material-icons">highlight_off</span>
+          <p>Eraser</p>
+        </div>
+
+        <div class="tool-item" title="Line Tool">
+          <span class="material-icons">linear_scale</span>
+          <p>Line</p>
+        </div>
+
+        <div class="tool-item" title="Rectangle Tool">
+          <span class="material-icons">crop_square</span>
+          <p>Rectangle</p>
+        </div>
+
+        <div class="tool-item" title="Circle Tool">
+          <span class="material-icons">circle</span>
+          <p>Circle</p>
+        </div>
+
+        <div class="tool-item" title="Polygon Tool">
+          <span class="material-icons">polygon</span>
+          <p>Polygon</p>
+        </div>
+
+        <div class="tool-item" title="Text Tool">
+          <span class="material-icons">text_fields</span>
+          <p>Text</p>
+        </div>
+
+        <div class="tool-item" title="Gradient Brush">
+          <span class="material-icons">gradient</span>
+          <p>Gradient Brush</p>
+        </div>
+
+        <div class="tool-item" title="Pattern Brush">
+          <span class="material-icons">texture</span>
+          <p>Pattern Brush</p>
+        </div>
+
+        <div class="tool-item" title="Layer Management">
+          <span class="material-icons">layers</span>
+          <p>Layer Management</p>
+        </div>
+
+        <div class="tool-item" title="Sepia Filter">
+          <span class="material-icons">filter_b_and_w</span>
+          <p>Sepia</p>
+        </div>
+
+        <div class="tool-item" title="Grayscale Filter">
+          <span class="material-icons">filter_1</span>
+          <p>Grayscale</p>
+        </div>
+
+        <div class="tool-item" title="Blur Filter">
+          <span class="material-icons">blur_on</span>
+          <p>Blur</p>
+        </div>
+
+        <div class="tool-item" title="Increase Size">
+          <span class="material-icons">add</span>
+          <p>Increase</p>
+        </div>
+
+        <div class="tool-item" title="Decrease Size">
+          <span class="material-icons">remove</span>
+          <p>Decrease</p>
+        </div>
+
+        <div class="tool-item" title="Undo">
+          <span class="material-icons">undo</span>
+          <p>Undo</p>
+        </div>
+
+        <div class="tool-item" title="Redo">
+          <span class="material-icons">redo</span>
+          <p>Redo</p>
+        </div>
+
+        <div class="tool-item" title="Clear Canvas">
+          <span class="material-icons">clear</span>
+          <p>Clear</p>
+        </div>
+
+        <div class="tool-item" title="Save Drawing">
+          <span class="material-icons">save</span>
+          <p>Save</p>
+        </div>
+
+        <div class="tool-item" title="Select Brush Shape">
+          <span class="material-icons">brush</span>
+          <p>Shape</p>
+        </div>
+
+        <div class="tool-item" title="Custom Color">
+          <input type="color" id="customColor" />
+          <p>Custom Color</p>
+        </div>
+
+        <div class="tool-item" title="Canvas Size Control">
+          <input
+            type="range"
+            id="canvasSize"
+            min="500"
+            max="15000"
+            value="1200"
+            step="100"
+          />
+          <p>Canvas Size</p>
+        </div>
+
+        <div class="tool-item" title="Brush Size Control">
+          <input
+            type="range"
+            id="brushSize"
+            min="1"
+            max="1000"
+            value="5"
+            step="1"
+          />
+          <p>Brush Size</p>
+        </div>
+
+        <div class="tool-item" title="Brush Opacity Control">
+          <input
+            type="range"
+            id="brushOpacity"
+            min="0"
+            max="100"
+            value="100"
+            step="1"
+          />
+          <p>Brush Opacity</p>
+        </div>
+
+        <div class="tool-item" title="Brush Hardness Control">
+          <input
+            type="range"
+            id="brushHardness"
+            min="0"
+            max="100"
+            value="50"
+            step="1"
+          />
+          <p>Brush Hardness</p>
+        </div>
+
+        <div class="tool-item" title="Line Thickness Control">
+          <input
+            type="range"
+            id="lineThickness"
+            min="1"
+            max="300"
+            value="2"
+            step="1"
+          />
+          <p>Line Thickness</p>
+        </div>
+
+        <div class="tool-item" title="Text Size Control">
+          <input
+            type="range"
+            id="textSize"
+            min="10"
+            max="500"
+            value="30"
+            step="1"
+          />
+          <p>Text Size</p>
+        </div>
+
+        <div class="tool-item" title="Text Opacity Control">
+          <input
+            type="range"
+            id="textOpacity"
+            min="0"
+            max="100"
+            value="100"
+            step="1"
+          />
+          <p>Text Opacity</p>
+        </div>
+
+        <div class="tool-item" title="Gradient Angle Control">
+          <input
+            type="range"
+            id="gradientAngle"
+            min="0"
+            max="360"
+            value="0"
+            step="1"
+          />
+          <p>Gradient Angle</p>
+        </div>
+
+        <div class="tool-item" title="Shadow Intensity Control">
+          <input
+            type="range"
+            id="shadowIntensity"
+            min="0"
+            max="100"
+            value="50"
+            step="1"
+          />
+          <p>Shadow Intensity</p>
+        </div>
+
+        <div class="tool-item" title="Pattern Brush Scale">
+          <input
+            type="range"
+            id="patternScale"
+            min="1"
+            max="1000"
+            value="100"
+            step="1"
+          />
+          <p>Pattern Scale</p>
+        </div>
+
+        <div class="tool-item" title="Background Color">
+          <input type="color" id="backgroundColor" />
+          <p>BG Color</p>
+        </div>
+
+        <div class="tool-item" title="Opacity Control">
+          <input
+            type="range"
+            id="canvasOpacity"
+            min="0"
+            max="100"
+            value="100"
+            step="1"
+          />
+          <p>Canvas Opacity</p>
+        </div>
+
+        <div class="tool-item" title="Rotation Control">
+          <input
+            type="range"
+            id="rotationControl"
+            min="0"
+            max="360"
+            value="0"
+            step="1"
+          />
+          <p>Rotation</p>
+        </div>
+
+        <div class="tool-item" title="Zoom Control">
+          <input
+            type="range"
+            id="zoomControl"
+            min="1"
+            max="200"
+            value="100"
+            step="1"
+          />
+          <p>Zoom</p>
+        </div>
+
+        <div class="tool-item" title="Flip Horizontal">
+          <span class="material-icons">flip</span>
+          <p>Flip Horizontal</p>
+        </div>
+
+        <div class="tool-item" title="Flip Vertical">
+          <span class="material-icons">flip</span>
+          <p>Flip Vertical</p>
+        </div>
+      </section>
+    </header>
+    <section class="canvas-container">
+      <canvas id="drawingCanvas" width="1200" height="800"></canvas>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2024 Paint Application | Developed by
+        <a href="https://www.instagram.com/girishkor" target="_blank"
+          >Girish Kor</a
+        >
+      </p>
+    </footer>
+    <script src="./script/script.js"></script>
+    <script src="./script/script1.js"></script>
+    <script src="./script/script2.js"></script>
+    <script src="./script/script3.js"></script>
+    <script src="./script/script4.js"></script>
+    <script src="./script/script5.js"></script>
+    <script src="./script/script6.js"></script>
+    <script src="./script/script7.js"></script>
+    <script src="./script/script8.js"></script>
+  </body>
+</html>
